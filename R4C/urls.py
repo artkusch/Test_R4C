@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from robots.views import create_robot, export_data_to_xlsx
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('create', create_robot),
+    path('export', export_data_to_xlsx, name='export-xlsx'),
 ]
